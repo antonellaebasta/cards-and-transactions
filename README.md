@@ -3,6 +3,8 @@
 A banking-style overview page: card selection → balance → filters →
 transaction list.
 
+![Demo](docs/demo.gif)
+
 ## How to run
 
 ```bash
