@@ -1,15 +1,8 @@
 import { assignTransactionKeys } from "./assignTransactionKeys";
 import { classifyAmount } from "./classifyAmount";
 import { resolveCardAccent } from "./cardAccent";
-import {
-  TransactionDirection,
-  TransactionStatus,
-  type Card,
-  type CardId,
-  type RawCard,
-  type RawTransactionsByCardId,
-  type Transaction,
-} from "./types";
+import { TransactionDirection, TransactionStatus, type Card, type CardId, type Transaction } from "./types";
+import type { RawCard, RawTransactionsByCardId } from "../api/types";
 
 export const getCards = (raw: readonly RawCard[]): Card[] =>
   raw.map((card) => ({

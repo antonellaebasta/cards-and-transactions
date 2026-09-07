@@ -31,6 +31,8 @@ describe("Overview", () => {
     expect(screen.getByLabelText("Minimum amount")).toHaveValue(0);
     expect(screen.getByRole("button", { name: "All" })).toHaveAttribute("aria-pressed", "true");
 
+    expect(screen.getByText("+48,20 €")).toBeInTheDocument();
+
     // Filter by amount: only rows worth >= 100 remain (Private Card has none this large -> empty state).
     fireEvent.change(screen.getByLabelText("Minimum amount"), { target: { value: "1000" } });
     expect(screen.getByText("No transactions match your filters.")).toBeInTheDocument();
@@ -40,6 +42,9 @@ describe("Overview", () => {
     expect(screen.getByLabelText("Minimum amount")).toHaveValue(0);
     expect(screen.getByText("Recent activity · Business Card")).toBeInTheDocument();
     expect(screen.getByText("T-Shirt")).toBeInTheDocument();
+
+    expect(screen.getByText("Hotel Booking (pending)")).toBeInTheDocument();
+    expect(screen.getByText("Pending")).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: "Out" }));
     expect(screen.getByText("Refund for Smart Phone")).toBeInTheDocument();

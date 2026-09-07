@@ -2,7 +2,8 @@ import { describe, expect, it } from "vitest";
 import { getCards, getTransactionsByCardId, getTransactionsForCard } from "./cardsTransactionsAdapter";
 import rawCards from "../data/cards.json";
 import rawTransactionsByCardId from "../data/transactions.json";
-import { CardAccent, TransactionDirection, TransactionStatus, type RawCard, type RawTransactionsByCardId } from "./types";
+import { CardAccent, TransactionDirection, TransactionStatus } from "./types";
+import type { RawCard, RawTransactionsByCardId } from "../api/types";
 
 const CARDS = rawCards as RawCard[];
 const TRANSACTIONS = rawTransactionsByCardId as RawTransactionsByCardId;
