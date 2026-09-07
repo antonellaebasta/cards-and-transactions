@@ -1,8 +1,7 @@
 # Cards & Transactions
 
-A banking-style overview page (card selection → balance → filters →
-transaction list), built for the exercise described in
-[`ASSIGNMENT.md`](./ASSIGNMENT.md).
+A banking-style overview page: card selection → balance → filters →
+transaction list.
 
 ## How to run
 
